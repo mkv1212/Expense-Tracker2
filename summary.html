@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Summary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Summary</h1>
+      <div id="summaryTable">
+        <h3>
+          Daily Total: <span id="dailyTotalCurrency"></span
+          ><span id="dailyTotal">0.00</span>
+        </h3>
+        <h3>
+          Weekly Total: <span id="weeklyTotalCurrency"></span
+          ><span id="weeklyTotal">0.00</span>
+        </h3>
+        <h3>
+          Monthly Total: <span id="monthlyTotalCurrency"></span
+          ><span id="monthlyTotal">0.00</span>
+        </h3>
+        <h3>
+          Quarterly Total: <span id="quarterlyTotalCurrency"></span
+          ><span id="quarterlyTotal">0.00</span>
+        </h3>
+        <h3>
+          Yearly Total: <span id="yearlyTotalCurrency"></span
+          ><span id="yearlyTotal">0.00</span>
+        </h3>
+      </div>
+      <div class="action-buttons">
+        <button onclick="window.location.href='tracker.html'" class="back-btn">
+          Back to Tracker
+        </button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

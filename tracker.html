@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+
+      <form id="expenseForm">
+        <input
+          type="text"
+          id="description"
+          placeholder="Description (e.g., Lunch)"
+          required
+        />
+        <select id="category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Other">Other</option>
+        </select>
+        <input
+          type="number"
+          id="amount"
+          placeholder="Amount"
+          step="0.01"
+          required
+        />
+        <select id="currency" required>
+          <option value="INR">INR (₹)</option>
+          <option value="USD">Dollar ($)</option>
+        </select>
+        <input type="date" id="date" required />
+        <button type="submit">Add Expense</button>
+      </form>
+      <div id="successMessage" class="success-message"></div>
+
+      <div class="filter-section">
+        <label for="timeFilter">Filter by Time:</label>
+        <select id="timeFilter" onchange="applyFilter()">
+          <option value="all">All Time</option>
+          <option value="daily">Today</option>
+          <option value="weekly">This Week</option>
+          <option value="monthly">This Month</option>
+          <option value="quarterly">This Quarter</option>
+          <option value="yearly">This Year</option>
+        </select>
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter" onchange="applyFilter()">
+          <option value="all">All Categories</option>
+          <option value="Food">Food</option>
+          <option value="Travel">Travel</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Other">Other</option>
+        </select>
+        <label for="dateFilter">Filter by Date:</label>
+        <input type="date" id="dateFilter" onchange="applyFilter()" />
+        <h3>
+          Total Spent: <span id="totalCurrency"></span
+          ><span id="total">0.00</span>
+        </h3>
+      </div>
+
+      <table id="expenseTable">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="expenseList"></tbody>
+      </table>
+
+      <div class="action-buttons">
+        <button id="viewSummary" class="summary-btn">View Summary</button>
+        <button id="exportData" class="export-btn">Export as CSV</button>
+        <button id="clearData" class="clear-btn">Clear All Data</button>
+        <button id="logout" class="logout-btn">Logout</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

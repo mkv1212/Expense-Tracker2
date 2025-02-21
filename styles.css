@@ -1,0 +1,426 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #e4405f, #1da1f2, #7289da);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* General Container */
+.signup-container,
+.container {
+  max-width: 1000px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Sign-Up Page */
+.signup-container {
+  max-width: 450px;
+}
+
+.signup-container h1 {
+  color: #2c3e50;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.signup-container .highlight {
+  color: #e4405f;
+  font-weight: bold;
+}
+
+.signup-container .tagline {
+  color: #7f8c8d;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.signup-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-group i {
+  position: absolute;
+  left: 15px;
+  color: #1da1f2;
+  font-size: 18px;
+}
+
+.signup-container input {
+  width: 100%;
+  padding: 12px 12px 12px 45px;
+  font-size: 16px;
+  border: 2px solid #ccd1d9;
+  border-radius: 8px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-container input:focus {
+  border-color: #7289da;
+  box-shadow: 0 0 8px rgba(114, 137, 218, 0.3);
+  outline: none;
+}
+
+.signup-btn {
+  background-color: #e4405f;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.signup-btn:hover {
+  background-color: #d32e4e;
+  transform: translateY(-2px);
+}
+
+.divider {
+  margin: 25px 0;
+  position: relative;
+}
+
+.divider span {
+  background: #ffffff;
+  padding: 0 10px;
+  color: #7f8c8d;
+  font-size: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccd1d9;
+}
+
+.social-logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.social-btn {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  font-size: 24px;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.instagram {
+  background-color: #e4405f;
+}
+.x {
+  background-color: #1da1f2;
+}
+.discord {
+  background-color: #7289da;
+}
+
+.login-link {
+  color: #34495e;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-link a {
+  color: #1da1f2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* Tracker and Summary Pages */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+input,
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccd1d9;
+  border-radius: 6px;
+  flex: 1;
+  min-width: 120px;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.success-message {
+  text-align: center;
+  color: #27ae60;
+  margin-bottom: 20px;
+  display: none;
+}
+
+.filter-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+label {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+select,
+#dateFilter {
+  padding: 8px;
+  background-color: #f9fbfd;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #e6ecf0;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 600;
+}
+
+td {
+  color: #34495e;
+}
+
+tr:hover {
+  background-color: #f5f7fa;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  padding: 4px 6px;
+  font-size: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.summary-btn {
+  background-color: #9b59b6;
+}
+.summary-btn:hover {
+  background-color: #8e44ad;
+}
+.export-btn {
+  background-color: #27ae60;
+}
+.export-btn:hover {
+  background-color: #219653;
+}
+.clear-btn {
+  background-color: #e74c3c;
+}
+.clear-btn:hover {
+  background-color: #c0392b;
+}
+.logout-btn,
+.back-btn {
+  background-color: #f1c40f;
+}
+.logout-btn:hover,
+.back-btn:hover {
+  background-color: #d4ac0d;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-container,
+  .container {
+    padding: 20px;
+    margin: 10px;
+  }
+  .signup-container form,
+  .container form,
+  .filter-section,
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .input-group i {
+    font-size: 16px;
+    left: 10px;
+  }
+  .signup-container input {
+    padding-left: 40px;
+  }
+  .social-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-container h1,
+  .container h1 {
+    font-size: 28px;
+  }
+  .signup-container .tagline {
+    font-size: 14px;
+  }
+  .signup-btn {
+    font-size: 16px;
+  }
+}
+
+/* responsive table */
+#expenseTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#expenseTable th,
+#expenseTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* #expenseTable th {
+  background-color: #f0f0f0;
+} */
+
+.delete-btn {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #e91e63;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 768px) {
+  #expenseTable {
+    font-size: 14px;
+  }
+  #expenseTable th,
+  #expenseTable td {
+    padding: 4px;
+  }
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #expenseTable {
+    font-size: 12px;
+  }
+  #expenseTable th,
+  #expenseTable td {
+    padding: 2px;
+  }
+  .delete-btn {
+    padding: 2px 4px;
+    font-size: 10px;
+  }
+}
